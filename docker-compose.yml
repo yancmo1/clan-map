@@ -4,14 +4,14 @@ services:
   clan-map:
     build: .
     ports:
-      - "5000:5000"
+      - "5010:5010"
     environment:
       - FLASK_ENV=production
     restart: unless-stopped
     volumes:
       - ./clan_data.json:/app/clan_data.json:ro
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      test: ["CMD", "curl", "-f", "http://localhost:5010/"]
       interval: 30s
       timeout: 10s
       retries: 3

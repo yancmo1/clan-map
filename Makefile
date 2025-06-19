@@ -13,8 +13,8 @@ build: ## Build Docker image
 	docker build -t clan-map:latest .
 
 run: build ## Build and run Docker container
-	docker run -d --name clan-map -p 5000:5000 clan-map:latest
-	@echo "🚀 Application running at http://localhost:5000"
+	docker run -d --name clan-map -p 5010:5010 clan-map:latest
+	@echo "🚀 Application running at http://localhost:5010"
 
 stop: ## Stop and remove Docker container
 	docker stop clan-map 2>/dev/null || true
@@ -28,7 +28,7 @@ test: ## Run basic tests
 
 compose-up: ## Start with docker-compose
 	docker-compose up -d
-	@echo "🚀 Application running at http://localhost:5000"
+	@echo "🚀 Application running at http://localhost:5010"
 
 compose-down: ## Stop docker-compose services
 	docker-compose down
