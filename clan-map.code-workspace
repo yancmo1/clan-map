@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../COC-30-Discord-Bot-Mac"
 		}
 	],
 	"settings": {}

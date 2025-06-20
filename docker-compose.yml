@@ -10,6 +10,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./clan_data.json:/app/clan_data.json:ro
+      - ~/.ssh:/home/app/.ssh:ro
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5010/"]
       interval: 30s
